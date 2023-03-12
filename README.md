@@ -1,2 +1,7 @@
-# react-quickstart
-A repository that contains an React example that use's Authress to Login
+# Authress Quick Start for: React
+
+A repository that contains an React example that uses Authress to Login.
+
+## Getting Started
+
+Run `yarn` and then `yarn start`. Or use pnpm to install dependencies and then `start` the site.

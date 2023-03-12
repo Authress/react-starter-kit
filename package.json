@@ -1,0 +1,27 @@
+{
+  "name": "react-quickstart",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "preview": "vite preview",
+    "build": "tsc && vite build",
+    "start": "vite --port=8080",
+    "serve": "serve dist -p 8080",
+    "test": "vue-cli-service test:unit tests/**/*.test.js --require tests/.setup.js"
+  },
+  "dependencies": {
+    "authress-login": "^2.1.186",
+    "authress-sdk": "^2.0.59",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "serve": "^14.2.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
