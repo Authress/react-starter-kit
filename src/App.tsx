@@ -3,27 +3,42 @@ import reactLogo from './assets/react.svg'
 import authressLogo from './assets/logo.svg'
 import { LoginClient } from 'authress-login';
 
-const loginClient = new LoginClient({
-  // Create an application: https://authress.io/app/#/settings?focus=quick&flow=authentication
-  applicationId: '',
+let loginClient;
+try {
+  loginClient = new LoginClient({
+    // app_default is the default Authress created application.
+    // * Configure the default Authress application at https://authress.io/app/#/settings?focus=applications&applicationId=app_default
+    // * Create a new application at https://authress.io/app/#/settings?focus=applications
+    // * Or Create an application using the quick setup flow: https://authress.io/app/#/settings?focus=quick&flow=authentication
+    applicationId: 'app_default',
 
-  // Create a custom domain: https://authress.io/app/#/settings?focus=domain (https://login.application.com)
-  // * OR use the default one for your account: https://authress.io/app/#/api?route=overview (https://ACCOUNT_ID.api-region.authress.io)
-  authressLoginHostUrl: ''
-});
+    // Create a custom domain: https://authress.io/app/#/settings?focus=domain (https://login.application.com)
+    // * OR use the default one for your account: https://authress.io/app/#/api?route=overview (https://ACCOUNT_ID.api-region.authress.io)
+    authressLoginHostUrl: ''
+  });
+} catch (error) {
+  console.error(error);
+}
 
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0);
   const [userProfile, setUserProfile] = useState({});
+  const [authressLoginHostUrlIsSet, setAuthressLoginHostUrlIsSet] = useState(true);
   
   // let userProfile;
   useEffect(() => {
-    loginClient.userSessionExists().then(userIsLoggedIn => {
-      setUserProfile(loginClient.getUserIdentity());
-      console.log('User is Logged In', userIsLoggedIn, userProfile);
-    });
+    if (loginClient) {
+      loginClient.userSessionExists().then(userIsLoggedIn => {
+        setUserProfile(loginClient.getUserIdentity());
+        console.log('User is Logged In', userIsLoggedIn, userProfile);
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    setAuthressLoginHostUrlIsSet(!!loginClient);
   }, []);
 
   return (
@@ -38,22 +53,31 @@ function App() {
       </div>
       <h1>Authress + React</h1>
       <div style={{ 'border': '1px white solid', 'borderRadius': '10px', 'padding': '2rem' }}>
-        <button style={{ 'marginRight': '1rem' }} onClick={login}>Login</button>
-        <button style={{ 'marginRight': '1rem' }} onClick={logout}>Logout</button>
-        <button style={{ 'marginRight': '1rem' }} onClick={redirectToGuardedPage}>Go to Guarded Page</button>
-        <button style={{ 'marginRight': '1rem' }} onClick={makeApiCallWithUserToken}>Call your service API</button>
+        { authressLoginHostUrlIsSet ?
+          (<div>
+            <button style={{ 'marginRight': '1rem' }} onClick={login}>Login</button>
+            <button style={{ 'marginRight': '1rem' }} onClick={logout}>Logout</button>
+            <button style={{ 'marginRight': '1rem' }} onClick={redirectToGuardedPage}>Go to Guarded Page</button>
+            <button style={{ 'marginRight': '1rem' }} onClick={makeApiCallWithUserToken}>Call your service API</button>
 
-        <br></br><br></br>
+            <br></br><br></br>
 
-        <div style={{ "textAlign": "left" }}>
-          <span>User Profile:</span>
-          <pre>{ JSON.stringify(userProfile || 'Not logged in', null, 2) }</pre>
-        </div>
+            <div style={{ "textAlign": "left" }}>
+              <span>User Profile:</span>
+              <pre>{ JSON.stringify(userProfile || 'Not logged in', null, 2) }</pre>
+            </div>
 
-        <br></br><br></br>
-        <div>
-          Edit <code>src/App.tsx</code> to update the login function.
-        </div>
+            <br></br><br></br>
+            <div>
+              Edit <code>src/App.tsx</code> to update the login function.
+            </div>
+          </div>)
+          : (<div style={{ color: '#dc3545' }}>
+              <div>
+                Authress Account Host URL is missing from your configuration. Go to <strong>src/App.tsx</strong> and specify the <strong>AuthressLoginHostUrl</strong> at the top of the file..
+              </div>    
+            </div>)
+        }
       </div>
       <p className="read-the-docs">
         Click on the Authress logos to learn more
