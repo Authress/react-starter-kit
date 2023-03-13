@@ -1,4 +1,4 @@
-# Authress Quick Start for: React
+# Authress Starter Kit for: React
 
 A repository that contains an React example that uses Authress to Login.
 
