@@ -97,7 +97,7 @@ function App() {
           </div>
         )}
       </div>
-      <p className="read-the-docs">Click on the Authress logos to learn more</p>
+      <p className="read-the-docs">Click on the Authress logo to learn more</p>
     </div>
   );
 }
