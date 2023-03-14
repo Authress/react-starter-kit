@@ -111,7 +111,7 @@ async function login() {
 async function logout() {
   console.log('Logging out');
 
-  await loginClient.logout('http://localhost:8080');
+  await loginClient.logout(window.location.href);
 }
 
 async function redirectToGuardedPage() {
