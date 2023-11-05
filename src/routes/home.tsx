@@ -36,7 +36,7 @@ function App() {
         <a href="https://authress.io" target="_blank">
           <img src={authressLogo} className="logo" alt="Authress logo" />
         </a>
-        <a href="https://authress.io/knowledge-base" target="_blank">
+        <a href="https://authress.io/knowledge-base/docs/SDKs/javascript#starter-kits" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -81,7 +81,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <div style={{ color: 'white' }}>
+          <div>
             <div>
               Authress Account Host URL is missing from your configuration. Go to <strong>src/App.tsx</strong> and
               specify the <strong>AuthressLoginHostUrl</strong> at the top of the <code style={{ color: '#dc3545' }}>src/authressClient.tsx</code> file.
