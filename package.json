@@ -1,5 +1,5 @@
 {
-  "name": "react-quickstart",
+  "name": "react-starer-kit",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,7 @@
     "authress-sdk": "^2.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
-    "openapi-explorer": "^1.0.551",
+    "openapi-explorer": "^2.1.642",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.0",

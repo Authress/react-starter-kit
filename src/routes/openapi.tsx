@@ -1,6 +1,7 @@
 import 'openapi-explorer';
+import { reactEventListener } from '../../../../openapi-explorer/dist/es/react.js'
 import type { FunctionComponent } from 'react';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface OpenApiExplorerProps {
   collapse?: boolean;
@@ -15,7 +16,13 @@ declare global {
   }
 }
 
-const ApiExplorer: FunctionComponent = () => {
+const requestFunction = (...args) => {
+  console.log('API Request:', args);
+  return true;
+}
+
+const ApiExplorer: FunctionComponent = () => { 
+  reactEventListener({ useEffect }, 'request', requestFunction);
   return (
     <openapi-explorer
       collapse table
