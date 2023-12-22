@@ -75,16 +75,11 @@ function App() {
             </div>
 
             <br></br>
-            <br></br>
-            <div>
-              Edit <code>src/App.tsx</code> to update the login function.
-            </div>
           </div>
         ) : (
           <div>
             <div>
-              Authress Account Host URL is missing from your configuration. Go to <strong>src/App.tsx</strong> and
-              specify the <strong>AuthressLoginHostUrl</strong> at the top of the <code style={{ color: '#dc3545' }}>src/authressClient.tsx</code> file.
+              Authress Account Host URL is missing from your configuration.<br></br>Specify the <strong>AuthressLoginHostUrl</strong> at the top of the <code style={{ color: '#dc3545' }}>src/authressClient.tsx</code> file.
               <br /><br />
               If you need an account, sign up for free at <a href="https://authress.io/app/#/signup">Authress.io</a>!
             </div>
