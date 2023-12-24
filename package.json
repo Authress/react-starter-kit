@@ -11,11 +11,12 @@
     "test": "vue-cli-service test:unit tests/**/*.test.js --require tests/.setup.js"
   },
   "dependencies": {
-    "authress-login": "^2.1",
-    "authress-sdk": "^2.0",
+    "@authress/login": "*",
+    "authress-login": "*",
+    "authress-sdk": "*",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
-    "openapi-explorer": "^2.1.642",
+    "openapi-explorer": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.0",

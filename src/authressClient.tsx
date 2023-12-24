@@ -1,4 +1,4 @@
-import { LoginClient } from 'authress-login';
+import { LoginClient } from '@authress/login';
 
 let loginClient: LoginClient = null;
 try {

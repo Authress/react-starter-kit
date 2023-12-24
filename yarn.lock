@@ -12,6 +12,14 @@
     call-me-maybe "^1.0.1"
     js-yaml "^4.1.0"
 
+"@authress/login@*":
+  version "2.3.273"
+  resolved "https://registry.yarnpkg.com/@authress/login/-/login-2.3.273.tgz#a514b06525ecac07b74e71d8b5e60758d74f1034"
+  integrity sha512-dhulMDjTUnSCWIOIwLpnf3osLfLQqMhOVMDDsnJqk1MtOFTaEH3ayyQntIvEWF7d+GinOwBCapA/g7rDmSKUww==
+  dependencies:
+    cookie "^0.5.0"
+    lodash.take "^4.1.1"
+
 "@authress/login@^2.0", "@authress/login@^2.2.196":
   version "2.2.223"
   resolved "https://registry.yarnpkg.com/@authress/login/-/login-2.2.223.tgz#17f82c564b403143dbc121fc4ed26cefeb7463be"
@@ -368,7 +376,7 @@ argparse@^2.0.1:
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
   integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
-authress-login@^2.1:
+authress-login@*:
   version "2.1.213"
   resolved "https://registry.yarnpkg.com/authress-login/-/authress-login-2.1.213.tgz#762df771665f6d52c1b73906c497e7866c1d2767"
   integrity sha512-pmEsbbgmm6+nSpMe35+g16GtAv1/TJwIf6k3I7u56XYo3K+yiakciAxEP2nwHhEGEx7+T4DcvXZxJdyTBUTzsg==
@@ -378,10 +386,10 @@ authress-login@^2.1:
     cookie "^0.5.0"
     lodash.take "^4.1.1"
 
-authress-sdk@^2.0:
-  version "2.0.69"
-  resolved "https://registry.yarnpkg.com/authress-sdk/-/authress-sdk-2.0.69.tgz#01d653455c27f23611d6b9d3b2c8ae32a7628d3a"
-  integrity sha512-iG3fFmmPUaA9I3uneeUfMjIErd9kO0OBjqRiE9yRrrlOsxfI8RR98S70KQEUFIXu7hMLJdP14Iu7Zx6cmd82uA==
+authress-sdk@*:
+  version "2.1.95"
+  resolved "https://registry.yarnpkg.com/authress-sdk/-/authress-sdk-2.1.95.tgz#4138953a39905dd2e83396ce4674f63ec403a1ba"
+  integrity sha512-zlF4xtsRcFSp0nnbhlMRVYL7Hct2tyQQG3mqu4RY+z6m//rISRMUtEwvqQctrpApuLQhWHAh5sMHLK1cNlygbA==
   dependencies:
     axios "^0.21"
     base64url "^3.0.1"
@@ -825,6 +833,11 @@ json-schema-traverse@^1.0.0:
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
   integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
 
+json5@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
+
 lie@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/lie/-/lie-3.1.1.tgz#9a436b2cc7746ca59de7a41fa469b3efb76bd87e"
@@ -1022,10 +1035,10 @@ openapi-data-validator@^2.0.40:
     media-typer "^1.1"
     require-from-string "^2.0.2"
 
-openapi-explorer@^2.1.642:
-  version "2.1.642"
-  resolved "https://registry.yarnpkg.com/openapi-explorer/-/openapi-explorer-2.1.642.tgz#469243c86847b091f80aa646bbd4d2c27c9c2870"
-  integrity sha512-aMEXVwTcmP+wK3gVQSB4GmNaJBjVdT2Mfi6duWKuLUISAq+tUWOpqnTAf0xE8DxAUV9rBkpH7DjVmVPoKB9eAw==
+openapi-explorer@*:
+  version "2.1.645"
+  resolved "https://registry.yarnpkg.com/openapi-explorer/-/openapi-explorer-2.1.645.tgz#58c4372342432b0d7fa478d906c00842e0cc8924"
+  integrity sha512-/qKi0NTGdx+e+toRq8vys/UPSVkeuIuYghbrpEzHXqdlfZ1oMylGYvz20SIy3mIj6krIlEMCsUmxSiXRfMW3SQ==
   dependencies:
     "@authress/login" "^2.0"
     base64url "^3.0.1"
@@ -1033,6 +1046,7 @@ openapi-explorer@^2.1.642:
     color "^4.2.3"
     create-hash "^1.2.0"
     i18next "^21.9.0"
+    json5 "^2.2.3"
     lit "^2.3.1"
     lodash.clonedeep "^4.5.0"
     lodash.merge "^4.6.2"

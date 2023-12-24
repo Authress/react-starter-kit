@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import { useEffect, useState } from 'react';
-import { LoginClient } from 'authress-login';
+import { LoginClient } from '@authress/login';
 import { Navigate, Outlet, useNavigate } from 'react-router-dom';
 
 
