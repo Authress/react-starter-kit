@@ -1,11 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { login } from '../authressClient';
+
 export default function Unauthorized() {
   const navigate = useNavigate();
+
+  async function loginAndRedirect() {
+    await login();
+    navigate('/');
+  }
+
   return (
     <div className="App">      
-      <h1>User is not logged in</h1>
+      <h1>You are not logged in</h1>
 
       <div
         style={{
@@ -19,6 +27,9 @@ export default function Unauthorized() {
         <br></br>
         <button style={{ marginRight: '1rem' }} onClick={() => navigate('/')}>
           Back to Home
+        </button>
+        <button style={{ marginRight: '1rem' }} onClick={loginAndRedirect}>
+          Login
         </button>
       </div>
     </div>

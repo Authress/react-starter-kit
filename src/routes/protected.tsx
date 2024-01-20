@@ -18,7 +18,7 @@ export default function ProtectedPage() {
 
         <br></br>
         <button style={{ marginRight: '1rem' }} onClick={() => navigate('/')}>
-          BackToHome
+          Back to Home
         </button>
       </div>
     </div>
