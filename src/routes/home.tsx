@@ -5,7 +5,7 @@ import { Outlet, Link, useNavigate } from "react-router-dom";
 import { login, logout, makeApiCallWithUserToken, starterKitIsConfiguredCorrectly, authressLoginClient } from '../authressClient';
 import reactLogo from './assets/react.svg';
 import authressLogo from './assets/logo.svg';
-// import Openapi from './openapi';
+import Openapi from './openapi';
 
 function App() {
   const navigate = useNavigate();
@@ -53,18 +53,24 @@ function App() {
       >
         {authressLoginHostUrlIsSet ? (
           <div>
-            <button style={{ marginRight: '1rem' }} onClick={login}>
-              Login
-            </button>
-            <button style={{ marginRight: '1rem' }} onClick={logout}>
-              Logout
-            </button>
+            {!userProfile ? 
+              <button style={{ marginRight: '1rem' }} onClick={login}>
+                Login
+              </button>
+              : <button style={{ marginRight: '1rem' }} onClick={logout}>
+                Logout
+              </button>
+            }
             <button style={{ marginRight: '1rem' }} onClick={() => navigate('/protected')}>
               Go to Authress Protected Route Page
             </button>
-            <button style={{ marginRight: '1rem' }} onClick={makeApiCallWithUserToken}>
-              Call your service API
-            </button>
+
+            {userProfile ?
+              <button style={{ marginRight: '1rem' }} onClick={makeApiCallWithUserToken}>
+                Call your service API
+              </button>
+              : ''
+            }
 
             <br></br>
             <br></br>

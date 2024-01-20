@@ -18,7 +18,7 @@ export default function Unauthorized() {
 
         <br></br>
         <button style={{ marginRight: '1rem' }} onClick={() => navigate('/')}>
-          Login
+          Back to Home
         </button>
       </div>
     </div>
