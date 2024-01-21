@@ -11,7 +11,7 @@ try {
 
     // Create a custom domain: https://authress.io/app/#/settings?focus=domain (https://login.application.com)
     // * OR use the default one for your account: https://authress.io/app/#/api?route=overview (https://ACCOUNT_ID.api-region.authress.io)
-    authressApiUrl: 'http://localhost:8888',
+    authressApiUrl: '',
   });
 
   loginClient.userSessionExists().then(userIsLoggedIn => {
