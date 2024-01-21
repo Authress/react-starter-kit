@@ -10,7 +10,7 @@ import Openapi from './openapi';
 function App() {
   const navigate = useNavigate();
   const [userProfile, setUserProfile] = useState({});
-  const [authressLoginHostUrlIsSet, setAuthressLoginHostUrlIsSet] = useState(true);
+  const [authressApiUrlIsSet, setAuthressApiUrlIsSet] = useState(true);
 
   // let userProfile;
   useEffect(() => {
@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setAuthressLoginHostUrlIsSet(starterKitIsConfiguredCorrectly);
+    setAuthressApiUrlIsSet(starterKitIsConfiguredCorrectly);
   }, []);
 
   return (
@@ -51,7 +51,7 @@ function App() {
           padding: '2rem',
         }}
       >
-        {authressLoginHostUrlIsSet ? (
+        {authressApiUrlIsSet ? (
           <div>
             {!userProfile ? 
               <button style={{ marginRight: '1rem' }} onClick={login}>
@@ -85,7 +85,7 @@ function App() {
         ) : (
           <div>
             <div>
-              Authress Account Host URL is missing from your configuration.<br></br>Specify the <strong>AuthressLoginHostUrl</strong> at the top of the <code style={{ color: '#dc3545' }}>src/authressClient.tsx</code> file.
+              Authress Account Host URL is missing from your configuration.<br></br>Specify the <strong>AuthressApiUrl</strong> at the top of the <code style={{ color: '#dc3545' }}>src/authressClient.tsx</code> file.
               <br /><br />
               If you need an account, sign up for free at <a href="https://authress.io/app/#/signup">Authress.io</a>!
             </div>

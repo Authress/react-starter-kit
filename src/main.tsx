@@ -23,14 +23,14 @@ interface GuardedRouteProps {
 function LoginGuardedRoute() {
   const navigate = useNavigate();
   const [userProfile, setUserProfile] = useState({});
-  const [authressLoginHostUrlIsSet, setAuthressLoginHostUrlIsSet] = useState(true);
+  const [authressApiUrlIsSet, setAuthressApiUrlIsSet] = useState(true);
 
   useEffect(async () => {
     
   }, []);
 
   useEffect(() => {
-    setAuthressLoginHostUrlIsSet(!!loginClient);
+    setAuthressApiUrlIsSet(!!loginClient);
   }, []);
 
   return (
