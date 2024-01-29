@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="300px" src="https://authress.io/static/images/media-banner.png" alt="Authress media banner">
+</p>
+
 # Authress Starter Kit: React
 
 This repository is a repo template that contains an React example that uses Authress to Login. You can either [Fork](https://github.com/new?template_name=react-starter-kit&template_owner=Authress) this repository to start with the template, or directly clone it above.
