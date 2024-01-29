@@ -9,8 +9,8 @@ try {
     // * Or Create an application using the quick setup flow: https://authress.io/app/#/settings?focus=quick&flow=authentication
     applicationId: 'app_default',
 
-    // Create a custom domain: https://authress.io/app/#/settings?focus=domain (https://login.application.com)
-    // * OR use the default one for your account: https://authress.io/app/#/api?route=overview (https://ACCOUNT_ID.api-region.authress.io)
+    // Create a custom domain: https://authress.io/app/#/settings?focus=domain (https://authress.company.com)
+    // * OR use the default one for your account: https://authress.io/app/#/api?route=overview (https://ACCOUNT_ID.login.authress.io)
     authressApiUrl: '',
   });
 
