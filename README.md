@@ -11,7 +11,7 @@ This repository is a repo template that contains an React example that uses Auth
 git clone git@github.com:Authress/react-starter-kit.git
 ```
 
-3. Run `yarn` and then `yarn start`. Or use pnpm to install dependencies and then `start` the site.
+3. Run `npm install` and then `npm run start`. (Or use yarn/pnpm to install dependencies and then `start` the site.)
 
 ### File Directory
 
