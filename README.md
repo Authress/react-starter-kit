@@ -1,10 +1,17 @@
 # Authress Starter Kit: React
 
-A repository that contains an React example that uses Authress to Login.
+This repository is a repo template that contains an React example that uses Authress to Login. You can either [Fork](https://github.com/new?template_name=react-starter-kit&template_owner=Authress) this repository to start with the template, or directly clone it above.
 
 ## Getting Started
 
-Run `yarn` and then `yarn start`. Or use pnpm to install dependencies and then `start` the site.
+1. Fork this template repository to start a new React project: [Fork this template](https://github.com/Authress/react-starter-kit/fork)
+2. Clone the new repository:
+
+```sh
+git clone git@github.com:Authress/react-starter-kit.git
+```
+
+3. Run `yarn` and then `yarn start`. Or use pnpm to install dependencies and then `start` the site.
 
 ### File Directory
 
