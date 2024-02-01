@@ -22,7 +22,7 @@ export default function Unauthorized() {
           padding: '2rem',
         }}
       >
-        <div>This page is displayed when a user attempts to navigate a protected page and they are not logged in. When this happens, it makes sense to automatically redirect them to the login page.</div>
+        <div>This page is displayed when a user attempts to navigate to a protected page and they are not logged in. When this happens, it makes sense to automatically redirect them to the login page.</div>
 
         <br></br>
         <button style={{ marginRight: '1rem' }} onClick={() => navigate('/')}>
