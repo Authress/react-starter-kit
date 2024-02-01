@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@authress/login": "*",
+    "@authress/sdk": "*",
     "authress-login": "*",
-    "authress-sdk": "*",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "openapi-explorer": "*",
